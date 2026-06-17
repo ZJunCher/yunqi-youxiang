@@ -5,7 +5,7 @@ spring:
     name: yunqi-youxiang
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/yunqi_youxiang?useSSL=false&serverTimezone=UTC
     username: ${MYSQL_USERNAME:root}
     password: ${MYSQL_PASSWORD:your_mysql_password}
   redis:
@@ -37,10 +37,13 @@ yqyx:
   kafka:
     seckill-order-topic: yqyx.seckill.order
     cache-delete-topic: yqyx.cache.delete
+  upload:
+    # 图片上传目录，生产环境请通过环境变量 IMAGE_UPLOAD_DIR 或直接修改此值来指定实际路径
+    image-dir: ${IMAGE_UPLOAD_DIR:/tmp/yqyx/imgs/}
 mybatis-plus:
   type-aliases-package: com.yqyx.entity # 别名扫描包
 logging:
   level:
     com.yqyx: debug
   pattern:
-    dateformat: mm:ss.SSS
+    dateformat: HH:mm:ss.SSS
