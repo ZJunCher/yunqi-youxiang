@@ -35,7 +35,7 @@ spring:
       ack-mode: manual
 yqyx:
   upload:
-    image-dir: ${IMAGE_UPLOAD_DIR:/tmp/yqyx/imgs}
+    image-dir: ${IMAGE_UPLOAD_DIR:./uploads/imgs}
   kafka:
     seckill-order-topic: yqyx.seckill.order
     cache-delete-topic: yqyx.cache.delete
