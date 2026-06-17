@@ -38,6 +38,7 @@ yqyx:
     seckill-order-topic: yqyx.seckill.order
     cache-delete-topic: yqyx.cache.delete
   upload:
+    # 图片上传目录，生产环境请通过环境变量 IMAGE_UPLOAD_DIR 或直接修改此值来指定实际路径
     image-dir: ${IMAGE_UPLOAD_DIR:/tmp/yqyx/imgs/}
 mybatis-plus:
   type-aliases-package: com.yqyx.entity # 别名扫描包
