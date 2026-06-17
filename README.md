@@ -71,12 +71,12 @@ src/main/resources/db/yqyx.sql
 spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/yunqi_youxiang?useSSL=false&serverTimezone=UTC
-    username: root
-    password: 123
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:your_mysql_password}
   redis:
-    host: 192.168.150.101
+    host: ${REDIS_HOST:127.0.0.1}
     port: 6379
-    password: 123321
+    password: ${REDIS_PASSWORD:}
   kafka:
     bootstrap-servers: 127.0.0.1:9092
 ```
