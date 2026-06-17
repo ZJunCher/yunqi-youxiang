@@ -74,9 +74,9 @@ spring:
     username: root
     password: 123
   redis:
-    host: 192.168.150.101
+    host: 127.0.0.1
     port: 6379
-    password: 123321
+    password: your_redis_password
   kafka:
     bootstrap-servers: 127.0.0.1:9092
 ```
