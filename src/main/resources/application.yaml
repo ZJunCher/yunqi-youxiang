@@ -5,7 +5,7 @@ spring:
     name: yunqi-youxiang
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/hmdp?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/yunqi_youxiang?useSSL=false&serverTimezone=UTC
     username: ${MYSQL_USERNAME:root}
     password: ${MYSQL_PASSWORD:your_mysql_password}
   redis:
@@ -34,6 +34,8 @@ spring:
     listener:
       ack-mode: manual
 yqyx:
+  upload:
+    image-dir: ${IMAGE_UPLOAD_DIR:/tmp/yqyx/imgs}
   kafka:
     seckill-order-topic: yqyx.seckill.order
     cache-delete-topic: yqyx.cache.delete
